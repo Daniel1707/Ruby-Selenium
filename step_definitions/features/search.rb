@@ -1,16 +1,15 @@
 require 'rubygems'
-require './support/pages/google_page'
+require './pages/google_page'
 
-Given(/^We navigate to the Catho home page/) do
-  @teste = Google_page.new
-  @teste.open_page
+Given(/^We navigate to the Google home page/) do
+  @Google = Google_page.new
+  @Google.open_page
 end
 
 When(/^We search for the automação teste/) do
-  @teste.fill_office
-  @teste.click_buscar
+  @Google.fill_search_bar("Automação teste")
 end
 
 Then(/^The results for the search will be displayed/) do
-
+  @Google.click_pesquisa_google
 end
