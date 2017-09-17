@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'selenium-webdriver'
-#teste
+
 class Google_page
   @@driver = Selenium::WebDriver.for :firefox, marionette: true
 
