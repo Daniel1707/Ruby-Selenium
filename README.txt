@@ -1,4 +1,4 @@
-Projeto voltado para melhorar os aprendizados de:
+Project to learn more about:
 
  .Ruby;
  .Cucumber;
