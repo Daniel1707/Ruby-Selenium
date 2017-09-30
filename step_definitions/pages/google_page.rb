@@ -23,9 +23,9 @@ class Google_page
 
     begin
       @@driver.find_element(:id,"#@search_element").send_keys(search)
-      @@driver.save_screenshot('teste.png')
     rescue Exception => e
       puts "There is an error to fill search bar with the id #{@search_element}. #{e}"
+      @@driver.save_screenshot('Caso teste/search google/Bug/Method - fill_search_bar.png')
     end
   end
 
@@ -35,6 +35,7 @@ class Google_page
       @@driver.action.send_keys("\n").perform
     rescue Exception => e
       puts "There is an error to submit the form. #{e}"
+      @@driver.save_screenshot('Caso teste/search google/Bug/Method - submit.png')
     end
   end
 end

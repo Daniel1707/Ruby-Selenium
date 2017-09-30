@@ -14,5 +14,5 @@ When(/^We search for (.*)$/) do |search_to_fill|
 end
 
 Then(/^The results for the search will be displayed/) do
-
+  
 end
