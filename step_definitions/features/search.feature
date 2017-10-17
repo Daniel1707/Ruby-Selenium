@@ -1,5 +1,6 @@
 Feature: search
 Scenario:
   Given We navigate to the Google home page
-  When We search for How to make airplane RC
+  When We search for Apinfo
+  And We click on the first link
   Then The results for the search will be displayed

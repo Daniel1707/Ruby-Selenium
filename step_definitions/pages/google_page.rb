@@ -1,10 +1,9 @@
 require 'rubygems'
-require 'selenium-webdriver'
+require './core/driver'
 
 class Google_page
-  caps = Selenium::WebDriver::Remote::Capabilities.send("chrome")
-  #@@driver = Selenium::WebDriver.for :firefox, marionette: true
-  @@driver = Selenium::WebDriver.for(:remote, url: "http://192.168.99.100:4444/wd/hub", desired_capabilities: caps)
+
+  @@driver = Driver.return_driver
 
   def open_page
 
@@ -36,6 +35,19 @@ class Google_page
     rescue Exception => e
       puts "There is an error to submit the form. #{e}"
       @@driver.save_screenshot('Caso teste/search google/Bug/Method - submit.png')
+    end
+  end
+
+  def click_link_apinfo
+
+    @@link = "APinfo - O ponto de encontro dos profissionais de informática"
+
+    begin
+        @@driver.find_element(:link_text, @@link).click
+        @@driver.save_screenshot('Caso teste/search google/Imagens/Method - click_link.png')
+    rescue Exception => e
+      puts "There is an error to click on the link #{@@link}. #{e}"
+      @@driver.save_screenshot('Caso teste/search google/Bug/Method - click_link.png')
     end
   end
 end
