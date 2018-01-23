@@ -1,6 +1,5 @@
-Project to learn more about:
+Project to show more about:
 
  .Ruby;
  .Cucumber;
- .RSpec;
  .Selenium;
